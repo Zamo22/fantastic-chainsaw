@@ -35,7 +35,7 @@ jobs:
       
       - name: Compress XCFramework
         run: |
-          zip -r ./build/fantastic-chainsaw.xcframework.zip ./build/fantastic-chainsaw.xcframework
+          ditto -c -k --sequesterRsrc --keepParent ./build/fantastic-chainsaw.xcframework ./build/fantastic-chainsaw.xcframework.zip
           
       ## This can definitely be improved to use pattern matching instead of the entire line
       - name: Update Package File
