@@ -14,8 +14,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "chainsaw",
-      url: "https://github.com/Zamo22/fantastic-chainsaw/releases/download/0.0.12/chainsaw.xcframework.zip",
-      checksum: "3b7311c55bb266ad93c2a829a53ce6d15d15259bfd0f92537feebf25756bc4d6"
+      url: "https://github.com/Zamo22/fantastic-chainsaw/releases/download/0.0.13/chainsaw.xcframework.zip",
+      checksum: "afd99e9fbf2eb77ac17405b313c8c0817aa8d1ace3abf8d6cf1a6669e27d571f"
     )
   ]
 )
