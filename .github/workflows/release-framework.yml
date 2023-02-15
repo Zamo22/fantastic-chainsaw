@@ -37,6 +37,9 @@ jobs:
         run: |
           zip -r ./build/fantastic-chainsaw.xcframework.zip ./build/fantastic-chainsaw.xcframework
           
+      - name: Test
+        run: echo swift package compute-checksum ./build/fantastic-chainsaw.xcframework
+          
       ## This can definitely be improved to use pattern matching instead of the entire line
       - name: Update Package File
         run: |
