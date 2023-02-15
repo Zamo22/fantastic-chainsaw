@@ -41,8 +41,8 @@ jobs:
         uses: actions/create-release@v1
         id: create_release
         with:
-          release_name: ${{ github.event.inputs.version }}
-          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.event.inputs.version }}
+          tag_name: ${{ github.event.inputs.version }}
           body: This is our release. We should probably have some kind of release notes here but I am lazy.
         env:
           GITHUB_TOKEN: ${{ github.token }}
