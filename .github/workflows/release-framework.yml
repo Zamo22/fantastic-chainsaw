@@ -36,6 +36,23 @@ jobs:
       - name: Compress XCFramework
         run: |
           zip -r ./build/fantastic-chainsaw.xcframework.zip ./build/fantastic-chainsaw.xcframework
+          
+      ## This can definitely be improved to use pattern matching instead of the entire line
+      - name: Update Package File
+        run: |
+          CHECKSUM=swift package compute-checksum ./build/fantastic-chainsaw.xcframework
+          CHECKSUMLINE="      checksum: \"${CHECKSUM}\"" 
+          URL="      url: \"https:\/\/github.com\/Zamo22\/fantastic-chainsaw\/releases\/download\/${{ github.event.inputs.version }}\/fantastic-chainsaw.xcframework.zip\","
+          sed -i '' "17s/.*/$URL/" "./Package.swift"
+          sed -i '' "18s/.*/$CHECKSUMLINE/" "./Package.swift"
+          
+      - name: Commit package file changes
+        run: |
+          git config --global user.name "Zamo22"
+          git config --global user.email "zmoola22@gmail.com"
+          git add Package.swift
+          git commit -m "Updating Package file for release"
+          git push
 
       - name: release
         uses: actions/create-release@v1
