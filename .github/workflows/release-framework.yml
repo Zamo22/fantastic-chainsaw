@@ -42,7 +42,7 @@ jobs:
         run: |
           CHECKSUM=$(swift package compute-checksum ./build/chainsaw.xcframework.zip)
           CHECKSUMLINE="      checksum: \"${CHECKSUM}\"" 
-          URL="      url: \"https:\/\/github.com\/Zamo22\/chainsaw\/releases\/download\/${{ github.event.inputs.version }}\/chainsaw.xcframework.zip\","
+          URL="      url: \"https:\/\/github.com\/Zamo22\/fantastic-chainsaw\/releases\/download\/${{ github.event.inputs.version }}\/chainsaw.xcframework.zip\","
           sed -i '' "17s/.*/$URL/" "./Package.swift"
           sed -i '' "18s/.*/$CHECKSUMLINE/" "./Package.swift"
           
