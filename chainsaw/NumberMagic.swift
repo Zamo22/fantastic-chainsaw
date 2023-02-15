@@ -1,7 +1,7 @@
 import Foundation
 
 public class NumberMagic {
-    public init {}
+    public init() {}
 
     public var answerToTheUniverse = 42
 
