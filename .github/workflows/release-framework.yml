@@ -76,7 +76,7 @@ jobs:
         
       - uses: actions/download-artifact@v3
         with:
-          path: ./build/chainsaw.xcframework.zip
+          path: ./build/
 
       - name: release
         uses: actions/create-release@v1
