@@ -43,7 +43,6 @@ jobs:
           tag_name: ${{ github.ref }}
           body: |
             This is our release. We should probably have some kind of release notes here but I am lazy.
-          body_path: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ github.token }}
           
