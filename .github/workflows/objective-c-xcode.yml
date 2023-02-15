@@ -30,7 +30,7 @@ jobs:
       - name: Generate XCFramework
         run: >
           xcodebuild -create-xcframework
-          -framework './build/fantastic-chainsaw.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/fantastic-chainsaw.framework'
-          -framework './build/fantastic-chainsaw.framework-iphoneos.xcarchive/Products/Library/Frameworks/fantastic-chainsaw.framework'
-          -framework './build/fantastic-chainsaw.framework-catalyst.xcarchive/Products/Library/Frameworks/fantastic-chainsaw.framework'
+          -framework './build/fantastic-chainsaw.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
+          -framework './build/fantastic-chainsaw.framework-iphoneos.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
+          -framework './build/fantastic-chainsaw.framework-catalyst.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
           -output './build/fantastic-chainsaw.xcframework'
