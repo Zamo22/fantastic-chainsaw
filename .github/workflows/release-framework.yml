@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  build:
+  create:
     name: Create XCFramework
     runs-on: macos-latest
 
@@ -53,7 +53,28 @@ jobs:
           git add Package.swift
           git commit -m "Updating Package file for release"
           git push
-          git pull origin main
+          
+      - name: Upload Compressed Framework Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          path: ./build/chainsaw.xcframework.zip
+
+          
+  release:
+    name: Create Release
+    runs-on: macos-latest
+    needs: create
+  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+        
+      - uses: actions/download-artifact@v3
+        with:
+          path: ./build/chainsaw.xcframework.zip
 
       - name: release
         uses: actions/create-release@v1
