@@ -48,14 +48,15 @@ jobs:
           sed -i '' "17s/.*/$URL/" "./Package.swift"
           sed -i '' "18s/.*/$CHECKSUMLINE/" "./Package.swift"
           
+          
       - name: Commit package file changes
-        run: |
-          git status
-          git config --global user.name "Zamo22"
-          git config --global user.email "zmoola22@gmail.com"
-          git add Package.swift
-          git commit -m "Updating Package file for release"
-          git push
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Zamo22
+          author_email: zmoola22@gmail.com
+          message: 'Updating Package file for release'
+          add: 'Package.swift'
+
           
       - name: Upload Compressed Framework Artifact
         uses: actions/upload-artifact@v3.1.2
