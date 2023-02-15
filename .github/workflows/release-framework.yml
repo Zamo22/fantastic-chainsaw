@@ -21,9 +21,9 @@ jobs:
 
       - name: Archive Different Environments
         run: |
-          xcodebuild archive -scheme "fantastic-chainsaw" -destination 'generic/platform=iOS Simulator' -archivePath './build/fantastic-chainsaw.framework-iphoneos.xcarchive'
-          xcodebuild archive -scheme "fantastic-chainsaw" -destination 'generic/platform=iOS' -archivePath './build/fantastic-chainsaw.framework-iphonesimulator.xcarchive'
-          xcodebuild archive -scheme "fantastic-chainsaw" -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath './build/fantastic-chainsaw.framework-catalyst.xcarchive'
+          xcodebuild archive -scheme "fantastic-chainsaw" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath './build/fantastic-chainsaw.framework-iphoneos.xcarchive'
+          xcodebuild archive -scheme "fantastic-chainsaw" -configuration Release -destination 'generic/platform=iOS' -archivePath './build/fantastic-chainsaw.framework-iphonesimulator.xcarchive'
+          xcodebuild archive -scheme "fantastic-chainsaw" -configuration Release -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath './build/fantastic-chainsaw.framework-catalyst.xcarchive'
           
       - name: Generate XCFramework
         run: >
