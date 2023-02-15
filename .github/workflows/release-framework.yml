@@ -53,6 +53,7 @@ jobs:
           git add Package.swift
           git commit -m "Updating Package file for release"
           git push
+          git pull origin master
 
       - name: release
         uses: actions/create-release@v1
