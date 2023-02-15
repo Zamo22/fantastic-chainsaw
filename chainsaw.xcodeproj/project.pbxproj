@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1701CBD5299C1D7400DC943A /* fantastic_chainsaw.h in Headers */ = {isa = PBXBuildFile; fileRef = 1701CBD4299C1D7400DC943A /* fantastic_chainsaw.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1701CBDC299C1ED200DC943A /* NumberMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1701CBDB299C1ED200DC943A /* NumberMagic.swift */; };
+		179C406D299D5D5E0045CABB /* chainsaw.h in Headers */ = {isa = PBXBuildFile; fileRef = 179C406C299D5D5E0045CABB /* chainsaw.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		179C4074299D5D710045CABB /* NumberMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179C4073299D5D710045CABB /* NumberMagic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1701CBD1299C1D7400DC943A /* fantastic_chainsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fantastic_chainsaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1701CBD4299C1D7400DC943A /* fantastic_chainsaw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fantastic_chainsaw.h; sourceTree = "<group>"; };
-		1701CBDB299C1ED200DC943A /* NumberMagic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMagic.swift; sourceTree = "<group>"; };
+		179C4069299D5D5E0045CABB /* chainsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = chainsaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		179C406C299D5D5E0045CABB /* chainsaw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chainsaw.h; sourceTree = "<group>"; };
+		179C4073299D5D710045CABB /* NumberMagic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMagic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1701CBCE299C1D7400DC943A /* Frameworks */ = {
+		179C4066299D5D5E0045CABB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -28,79 +28,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1701CBC7299C1D7400DC943A = {
+		179C405F299D5D5E0045CABB = {
 			isa = PBXGroup;
 			children = (
-				1701CBD3299C1D7400DC943A /* fantastic-chainsaw */,
-				1701CBD2299C1D7400DC943A /* Products */,
+				179C406B299D5D5E0045CABB /* chainsaw */,
+				179C406A299D5D5E0045CABB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1701CBD2299C1D7400DC943A /* Products */ = {
+		179C406A299D5D5E0045CABB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1701CBD1299C1D7400DC943A /* fantastic_chainsaw.framework */,
+				179C4069299D5D5E0045CABB /* chainsaw.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1701CBD3299C1D7400DC943A /* fantastic-chainsaw */ = {
+		179C406B299D5D5E0045CABB /* chainsaw */ = {
 			isa = PBXGroup;
 			children = (
-				1701CBD4299C1D7400DC943A /* fantastic_chainsaw.h */,
-				1701CBDB299C1ED200DC943A /* NumberMagic.swift */,
+				179C406C299D5D5E0045CABB /* chainsaw.h */,
+				179C4073299D5D710045CABB /* NumberMagic.swift */,
 			);
-			path = "fantastic-chainsaw";
+			path = chainsaw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1701CBCC299C1D7400DC943A /* Headers */ = {
+		179C4064299D5D5E0045CABB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1701CBD5299C1D7400DC943A /* fantastic_chainsaw.h in Headers */,
+				179C406D299D5D5E0045CABB /* chainsaw.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1701CBD0299C1D7400DC943A /* fantastic-chainsaw */ = {
+		179C4068299D5D5E0045CABB /* chainsaw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1701CBD8299C1D7400DC943A /* Build configuration list for PBXNativeTarget "fantastic-chainsaw" */;
+			buildConfigurationList = 179C4070299D5D5E0045CABB /* Build configuration list for PBXNativeTarget "chainsaw" */;
 			buildPhases = (
-				1701CBCC299C1D7400DC943A /* Headers */,
-				1701CBCD299C1D7400DC943A /* Sources */,
-				1701CBCE299C1D7400DC943A /* Frameworks */,
-				1701CBCF299C1D7400DC943A /* Resources */,
+				179C4064299D5D5E0045CABB /* Headers */,
+				179C4065299D5D5E0045CABB /* Sources */,
+				179C4066299D5D5E0045CABB /* Frameworks */,
+				179C4067299D5D5E0045CABB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "fantastic-chainsaw";
-			productName = "fantastic-chainsaw";
-			productReference = 1701CBD1299C1D7400DC943A /* fantastic_chainsaw.framework */;
+			name = chainsaw;
+			productName = chainsaw;
+			productReference = 179C4069299D5D5E0045CABB /* chainsaw.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1701CBC8299C1D7400DC943A /* Project object */ = {
+		179C4060299D5D5E0045CABB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					1701CBD0299C1D7400DC943A = {
+					179C4068299D5D5E0045CABB = {
 						CreatedOnToolsVersion = 14.2;
 						LastSwiftMigration = 1420;
 					};
 				};
 			};
-			buildConfigurationList = 1701CBCB299C1D7400DC943A /* Build configuration list for PBXProject "fantastic-chainsaw" */;
+			buildConfigurationList = 179C4063299D5D5E0045CABB /* Build configuration list for PBXProject "chainsaw" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,18 +108,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 1701CBC7299C1D7400DC943A;
-			productRefGroup = 1701CBD2299C1D7400DC943A /* Products */;
+			mainGroup = 179C405F299D5D5E0045CABB;
+			productRefGroup = 179C406A299D5D5E0045CABB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1701CBD0299C1D7400DC943A /* fantastic-chainsaw */,
+				179C4068299D5D5E0045CABB /* chainsaw */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1701CBCF299C1D7400DC943A /* Resources */ = {
+		179C4067299D5D5E0045CABB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,18 +129,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1701CBCD299C1D7400DC943A /* Sources */ = {
+		179C4065299D5D5E0045CABB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1701CBDC299C1ED200DC943A /* NumberMagic.swift in Sources */,
+				179C4074299D5D710045CABB /* NumberMagic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1701CBD6299C1D7400DC943A /* Debug */ = {
+		179C406E299D5D5E0045CABB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -203,7 +203,7 @@
 			};
 			name = Debug;
 		};
-		1701CBD7299C1D7400DC943A /* Release */ = {
+		179C406F299D5D5E0045CABB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,7 +260,7 @@
 			};
 			name = Release;
 		};
-		1701CBD9299C1D7400DC943A /* Debug */ = {
+		179C4071299D5D5E0045CABB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -274,14 +274,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.za.dvt.fantastic-chainsaw";
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.dvt.chainsaw;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -291,7 +290,7 @@
 			};
 			name = Debug;
 		};
-		1701CBDA299C1D7400DC943A /* Release */ = {
+		179C4072299D5D5E0045CABB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -305,14 +304,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.za.dvt.fantastic-chainsaw";
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.dvt.chainsaw;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -324,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1701CBCB299C1D7400DC943A /* Build configuration list for PBXProject "fantastic-chainsaw" */ = {
+		179C4063299D5D5E0045CABB /* Build configuration list for PBXProject "chainsaw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1701CBD6299C1D7400DC943A /* Debug */,
-				1701CBD7299C1D7400DC943A /* Release */,
+				179C406E299D5D5E0045CABB /* Debug */,
+				179C406F299D5D5E0045CABB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1701CBD8299C1D7400DC943A /* Build configuration list for PBXNativeTarget "fantastic-chainsaw" */ = {
+		179C4070299D5D5E0045CABB /* Build configuration list for PBXNativeTarget "chainsaw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1701CBD9299C1D7400DC943A /* Debug */,
-				1701CBDA299C1D7400DC943A /* Release */,
+				179C4071299D5D5E0045CABB /* Debug */,
+				179C4072299D5D5E0045CABB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1701CBC8299C1D7400DC943A /* Project object */;
+	rootObject = 179C4060299D5D5E0045CABB /* Project object */;
 }
