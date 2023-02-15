@@ -13,6 +13,8 @@ jobs:
     name: Create XCFramework
     runs-on: macos-latest
 
+    permissions: write-all
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -41,8 +43,7 @@ jobs:
         with:
           release_name: ${{ github.event.inputs.version }}
           tag_name: ${{ github.ref }}
-          body: |
-            This is our release. We should probably have some kind of release notes here but I am lazy.
+          body: This is our release. We should probably have some kind of release notes here but I am lazy.
         env:
           GITHUB_TOKEN: ${{ github.token }}
           
