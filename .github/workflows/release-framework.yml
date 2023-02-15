@@ -64,6 +64,8 @@ jobs:
     name: Create Release
     runs-on: macos-latest
     needs: create
+    
+    permissions: write-all
   
     steps:
       - name: Checkout
