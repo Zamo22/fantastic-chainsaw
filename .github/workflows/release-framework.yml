@@ -21,28 +21,28 @@ jobs:
 
       - name: Archive Different Environments
         run: |
-          xcodebuild archive -scheme "fantastic-chainsaw" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath './build/fantastic-chainsaw.framework-iphoneos.xcarchive'
-          xcodebuild archive -scheme "fantastic-chainsaw" -configuration Release -destination 'generic/platform=iOS' -archivePath './build/fantastic-chainsaw.framework-iphonesimulator.xcarchive'
-          xcodebuild archive -scheme "fantastic-chainsaw" -configuration Release -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath './build/fantastic-chainsaw.framework-catalyst.xcarchive'
+          xcodebuild archive -scheme "chainsaw" -configuration Release -destination 'generic/platform=iOS Simulator' -archivePath './build/chainsaw.framework-iphoneos.xcarchive'
+          xcodebuild archive -scheme "chainsaw" -configuration Release -destination 'generic/platform=iOS' -archivePath './build/chainsaw.framework-iphonesimulator.xcarchive'
+          xcodebuild archive -scheme "chainsaw" -configuration Release -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst' -archivePath './build/chainsaw.framework-catalyst.xcarchive'
           
       - name: Generate XCFramework
         run: >
           xcodebuild -create-xcframework
-          -framework './build/fantastic-chainsaw.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
-          -framework './build/fantastic-chainsaw.framework-iphoneos.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
-          -framework './build/fantastic-chainsaw.framework-catalyst.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
-          -output './build/fantastic-chainsaw.xcframework'
+          -framework './build/chainsaw.framework-iphonesimulator.xcarchive/Products/Library/Frameworks/chainsaw.framework'
+          -framework './build/chainsaw.framework-iphoneos.xcarchive/Products/Library/Frameworks/chainsaw.framework'
+          -framework './build/chainsaw.framework-catalyst.xcarchive/Products/Library/Frameworks/chainsaw.framework'
+          -output './build/chainsaw.xcframework'
       
       - name: Compress XCFramework
         run: |
-          ditto -c -k --sequesterRsrc --keepParent ./build/fantastic-chainsaw.xcframework ./build/fantastic-chainsaw.xcframework.zip
+          ditto -c -k --sequesterRsrc --keepParent ./build/chainsaw.xcframework ./build/chainsaw.xcframework.zip
           
       ## This can definitely be improved to use pattern matching instead of the entire line
       - name: Update Package File
         run: |
-          CHECKSUM=$(swift package compute-checksum ./build/fantastic-chainsaw.xcframework.zip)
+          CHECKSUM=$(swift package compute-checksum ./build/chainsaw.xcframework.zip)
           CHECKSUMLINE="      checksum: \"${CHECKSUM}\"" 
-          URL="      url: \"https:\/\/github.com\/Zamo22\/fantastic-chainsaw\/releases\/download\/${{ github.event.inputs.version }}\/fantastic-chainsaw.xcframework.zip\","
+          URL="      url: \"https:\/\/github.com\/Zamo22\/chainsaw\/releases\/download\/${{ github.event.inputs.version }}\/chainsaw.xcframework.zip\","
           sed -i '' "17s/.*/$URL/" "./Package.swift"
           sed -i '' "18s/.*/$CHECKSUMLINE/" "./Package.swift"
           
@@ -70,6 +70,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./build/fantastic-chainsaw.xcframework.zip
-          asset_name: fantastic-chainsaw.xcframework.zip
+          asset_path: ./build/chainsaw.xcframework.zip
+          asset_name: chainsaw.xcframework.zip
           asset_content_type: application/zip
