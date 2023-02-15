@@ -30,3 +30,29 @@ jobs:
           -framework './build/fantastic-chainsaw.framework-iphoneos.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
           -framework './build/fantastic-chainsaw.framework-catalyst.xcarchive/Products/Library/Frameworks/fantastic_chainsaw.framework'
           -output './build/fantastic-chainsaw.xcframework'
+      
+      - name: Compress XCFramework
+        run: |
+          zip -r ./build/fantastic-chainsaw.xcframework.zip ./build/fantastic-chainsaw.xcframework
+
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          release_name: ${{ github.event.inputs.version }}
+          tag_name: ${{ github.ref }}
+          body: |
+            This is our release. We should probably have some kind of release notes here but I am lazy.
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          
+      - name: Upload xcframework artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/fantastic-chainsaw.xcframework.zip
+          asset_name: fantastic-chainsaw.xcframework.zip
+          asset_content_type: application/zip
