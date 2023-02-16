@@ -94,15 +94,7 @@ jobs:
           body: This is our release. We should probably have some kind of release notes here but I am lazy.
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          
-      - name: Release to public repo
-        uses: softprops/action-gh-release@v1
-        with:
-         repository: Zamo22/upgraded-chainsaw
-         token: ${{ secrets.PAT_TOKEN }}
-         tag_name: ${{ github.event.inputs.version }}
-         files: ./build/chainsaw.xcframework.zip
-          
+
       - name: Upload xcframework artifact
         uses: actions/upload-release-asset@v1
         env:
@@ -112,3 +104,49 @@ jobs:
           asset_path: ./build/chainsaw.xcframework.zip
           asset_name: chainsaw.xcframework.zip
           asset_content_type: application/zip
+          
+  public-release:
+      name: Create Public Release
+      runs-on: macos-latest
+      needs: create
+    
+      permissions: write-all
+  
+      steps:
+       - name: Checkout
+         uses: actions/checkout@v3
+         with:
+          repository: Zamo22/upgraded-chainsaw
+          token: ${{ secrets.PAT_TOKEN }}
+          ref: main
+        
+       - uses: actions/download-artifact@v3
+         with:
+          name: chainsaw.xcframework.zip
+          path: ./build/
+
+      ## This can definitely be improved to use pattern matching instead of the entire line
+       - name: Update Package File
+         run: |
+          CHECKSUM=$(swift package compute-checksum ./build/chainsaw.xcframework.zip)
+          CHECKSUMLINE="      checksum: \"${CHECKSUM}\"" 
+          URL="      url: \"https:\/\/github.com\/Zamo22\/upgraded-chainsaw\/releases\/download\/${{ github.event.inputs.version }}\/chainsaw.xcframework.zip\","
+          sed -i '' "19s/.*/$URL/" "./Package.swift"
+          sed -i '' "20s/.*/$CHECKSUMLINE/" "./Package.swift"
+          
+       - name: Commit package file changes
+         uses: EndBug/add-and-commit@v9
+         with:
+          author_name: Zamo22
+          author_email: zmoola22@gmail.com
+          message: 'Updating Package file for release'
+          add: 'Package.swift'
+          tag: '${{ github.event.inputs.version }}'
+          
+       - name: Release to public repo
+         uses: softprops/action-gh-release@v1
+         with:
+           repository: Zamo22/upgraded-chainsaw
+           token: ${{ secrets.PAT_TOKEN }}
+           tag_name: ${{ github.event.inputs.version }}
+           files: ./build/chainsaw.xcframework.zip
