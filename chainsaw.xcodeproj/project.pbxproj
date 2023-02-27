@@ -18,7 +18,6 @@
 		172CB88229ACDA9D0055DBD2 /* PaystackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87F29ACDA9D0055DBD2 /* PaystackBuilder.swift */; };
 		172CB88329ACDA9D0055DBD2 /* Paystack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB88029ACDA9D0055DBD2 /* Paystack.swift */; };
 		179C406D299D5D5E0045CABB /* chainsaw.h in Headers */ = {isa = PBXBuildFile; fileRef = 179C406C299D5D5E0045CABB /* chainsaw.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		179C4074299D5D710045CABB /* NumberMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179C4073299D5D710045CABB /* NumberMagic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		172CB88029ACDA9D0055DBD2 /* Paystack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paystack.swift; sourceTree = "<group>"; };
 		179C4069299D5D5E0045CABB /* chainsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = chainsaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		179C406C299D5D5E0045CABB /* chainsaw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chainsaw.h; sourceTree = "<group>"; };
-		179C4073299D5D710045CABB /* NumberMagic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMagic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 				172CB86E29ACDA800055DBD2 /* Payment */,
 				172CB86B29ACDA6E0055DBD2 /* Common */,
 				179C406C299D5D5E0045CABB /* chainsaw.h */,
-				179C4073299D5D710045CABB /* NumberMagic.swift */,
 			);
 			path = chainsaw;
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 				172CB87A29ACDA800055DBD2 /* FinalPaymnentStepView.swift in Sources */,
 				172CB88229ACDA9D0055DBD2 /* PaystackBuilder.swift in Sources */,
 				172CB87829ACDA800055DBD2 /* Payment.swift in Sources */,
-				179C4074299D5D710045CABB /* NumberMagic.swift in Sources */,
 				172CB88129ACDA9D0055DBD2 /* PaystackConfig.swift in Sources */,
 				172CB87B29ACDA800055DBD2 /* NewCardView.swift in Sources */,
 			);
