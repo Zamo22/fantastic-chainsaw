@@ -7,11 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172CB86D29ACDA6E0055DBD2 /* ViewVisibilityContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB86C29ACDA6E0055DBD2 /* ViewVisibilityContainer.swift */; };
+		172CB87729ACDA800055DBD2 /* PaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87029ACDA800055DBD2 /* PaymentResult.swift */; };
+		172CB87829ACDA800055DBD2 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87129ACDA800055DBD2 /* Payment.swift */; };
+		172CB87929ACDA800055DBD2 /* ChargeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87329ACDA800055DBD2 /* ChargeCardView.swift */; };
+		172CB87A29ACDA800055DBD2 /* FinalPaymnentStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87429ACDA800055DBD2 /* FinalPaymnentStepView.swift */; };
+		172CB87B29ACDA800055DBD2 /* NewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87529ACDA800055DBD2 /* NewCardView.swift */; };
+		172CB87C29ACDA800055DBD2 /* ChargeCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87629ACDA800055DBD2 /* ChargeCardButton.swift */; };
+		172CB88129ACDA9D0055DBD2 /* PaystackConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87E29ACDA9D0055DBD2 /* PaystackConfig.swift */; };
+		172CB88229ACDA9D0055DBD2 /* PaystackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87F29ACDA9D0055DBD2 /* PaystackBuilder.swift */; };
+		172CB88329ACDA9D0055DBD2 /* Paystack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB88029ACDA9D0055DBD2 /* Paystack.swift */; };
 		179C406D299D5D5E0045CABB /* chainsaw.h in Headers */ = {isa = PBXBuildFile; fileRef = 179C406C299D5D5E0045CABB /* chainsaw.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		179C4074299D5D710045CABB /* NumberMagic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179C4073299D5D710045CABB /* NumberMagic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172CB86C29ACDA6E0055DBD2 /* ViewVisibilityContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewVisibilityContainer.swift; sourceTree = "<group>"; };
+		172CB87029ACDA800055DBD2 /* PaymentResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResult.swift; sourceTree = "<group>"; };
+		172CB87129ACDA800055DBD2 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		172CB87329ACDA800055DBD2 /* ChargeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeCardView.swift; sourceTree = "<group>"; };
+		172CB87429ACDA800055DBD2 /* FinalPaymnentStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalPaymnentStepView.swift; sourceTree = "<group>"; };
+		172CB87529ACDA800055DBD2 /* NewCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCardView.swift; sourceTree = "<group>"; };
+		172CB87629ACDA800055DBD2 /* ChargeCardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeCardButton.swift; sourceTree = "<group>"; };
+		172CB87E29ACDA9D0055DBD2 /* PaystackConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaystackConfig.swift; sourceTree = "<group>"; };
+		172CB87F29ACDA9D0055DBD2 /* PaystackBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaystackBuilder.swift; sourceTree = "<group>"; };
+		172CB88029ACDA9D0055DBD2 /* Paystack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paystack.swift; sourceTree = "<group>"; };
 		179C4069299D5D5E0045CABB /* chainsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = chainsaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		179C406C299D5D5E0045CABB /* chainsaw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chainsaw.h; sourceTree = "<group>"; };
 		179C4073299D5D710045CABB /* NumberMagic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMagic.swift; sourceTree = "<group>"; };
@@ -28,6 +48,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172CB86B29ACDA6E0055DBD2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				172CB86C29ACDA6E0055DBD2 /* ViewVisibilityContainer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		172CB86E29ACDA800055DBD2 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				172CB86F29ACDA800055DBD2 /* Models */,
+				172CB87129ACDA800055DBD2 /* Payment.swift */,
+				172CB87229ACDA800055DBD2 /* Views */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		172CB86F29ACDA800055DBD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				172CB87029ACDA800055DBD2 /* PaymentResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		172CB87229ACDA800055DBD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				172CB87329ACDA800055DBD2 /* ChargeCardView.swift */,
+				172CB87429ACDA800055DBD2 /* FinalPaymnentStepView.swift */,
+				172CB87529ACDA800055DBD2 /* NewCardView.swift */,
+				172CB87629ACDA800055DBD2 /* ChargeCardButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		172CB87D29ACDA9D0055DBD2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				172CB87E29ACDA9D0055DBD2 /* PaystackConfig.swift */,
+				172CB87F29ACDA9D0055DBD2 /* PaystackBuilder.swift */,
+				172CB88029ACDA9D0055DBD2 /* Paystack.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		179C405F299D5D5E0045CABB = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +114,9 @@
 		179C406B299D5D5E0045CABB /* chainsaw */ = {
 			isa = PBXGroup;
 			children = (
+				172CB87D29ACDA9D0055DBD2 /* Builder */,
+				172CB86E29ACDA800055DBD2 /* Payment */,
+				172CB86B29ACDA6E0055DBD2 /* Common */,
 				179C406C299D5D5E0045CABB /* chainsaw.h */,
 				179C4073299D5D710045CABB /* NumberMagic.swift */,
 			);
@@ -133,7 +203,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172CB88329ACDA9D0055DBD2 /* Paystack.swift in Sources */,
+				172CB86D29ACDA6E0055DBD2 /* ViewVisibilityContainer.swift in Sources */,
+				172CB87C29ACDA800055DBD2 /* ChargeCardButton.swift in Sources */,
+				172CB87929ACDA800055DBD2 /* ChargeCardView.swift in Sources */,
+				172CB87729ACDA800055DBD2 /* PaymentResult.swift in Sources */,
+				172CB87A29ACDA800055DBD2 /* FinalPaymnentStepView.swift in Sources */,
+				172CB88229ACDA9D0055DBD2 /* PaystackBuilder.swift in Sources */,
+				172CB87829ACDA800055DBD2 /* Payment.swift in Sources */,
 				179C4074299D5D710045CABB /* NumberMagic.swift in Sources */,
+				172CB88129ACDA9D0055DBD2 /* PaystackConfig.swift in Sources */,
+				172CB87B29ACDA800055DBD2 /* NewCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
