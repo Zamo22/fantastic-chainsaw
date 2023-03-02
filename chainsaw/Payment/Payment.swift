@@ -8,7 +8,19 @@ public extension Paystack {
         // Do something...Return a response
     }
 
-    /// SwiftUI View for Charge Card UI
+    /// Creates a SwiftUI Button to intiate the chargeCard flow using Paystack's UI
+    /// - Parameters:
+    ///   - onComplete: Provide a closure for what should execute once the flow has completed, provides the ``PaymentResult`` of the transaction
+    ///   - content: Provide styling for your Button
+    /// - Returns: A SwiftUI `View` that should be placed in your view as an initiation point for the flow
+    ///
+    /// Example Usage:
+    /// ```swift
+    /// paystackObject.chargeCardUIButton(onComplete: viewModel.onPaymentComplete) {
+    /// Text("Charge Card")
+    ///    .padding()
+    /// }
+    ///
     func chargeCardUIButton<Content: View>(onComplete: @escaping (PaymentResult) -> Void,
                                            @ViewBuilder content: @escaping () -> Content) -> some View {
         ChargeCardButton(onComplete: onComplete) { content() }
