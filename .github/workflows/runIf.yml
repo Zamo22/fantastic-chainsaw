@@ -1,4 +1,4 @@
-name: iOS starter workflow
+name: Test Conditional Workflow
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
-    if: github.event.pull_request.merged == true && github.head_ref == `test/hello` 
+    if: github.event.pull_request.merged == true && github.head_ref == 'test/hello' 
     runs-on: macos-latest
 
     steps:
