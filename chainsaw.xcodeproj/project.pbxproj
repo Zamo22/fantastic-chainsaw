@@ -18,6 +18,7 @@
 		172CB88229ACDA9D0055DBD2 /* PaystackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB87F29ACDA9D0055DBD2 /* PaystackBuilder.swift */; };
 		172CB88329ACDA9D0055DBD2 /* Paystack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172CB88029ACDA9D0055DBD2 /* Paystack.swift */; };
 		179C406D299D5D5E0045CABB /* chainsaw.h in Headers */ = {isa = PBXBuildFile; fileRef = 179C406C299D5D5E0045CABB /* chainsaw.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17C09B1129D4404A00ED4016 /* NewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C09B1029D4404A00ED4016 /* NewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		172CB88029ACDA9D0055DBD2 /* Paystack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paystack.swift; sourceTree = "<group>"; };
 		179C4069299D5D5E0045CABB /* chainsaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = chainsaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		179C406C299D5D5E0045CABB /* chainsaw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chainsaw.h; sourceTree = "<group>"; };
+		17C09B1029D4404A00ED4016 /* NewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				172CB87029ACDA800055DBD2 /* PaymentResult.swift */,
+				17C09B1029D4404A00ED4016 /* NewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				172CB86D29ACDA6E0055DBD2 /* ViewVisibilityContainer.swift in Sources */,
 				172CB87C29ACDA800055DBD2 /* ChargeCardButton.swift in Sources */,
 				172CB87929ACDA800055DBD2 /* ChargeCardView.swift in Sources */,
+				17C09B1129D4404A00ED4016 /* NewModel.swift in Sources */,
 				172CB87729ACDA800055DBD2 /* PaymentResult.swift in Sources */,
 				172CB87A29ACDA800055DBD2 /* FinalPaymnentStepView.swift in Sources */,
 				172CB88229ACDA9D0055DBD2 /* PaystackBuilder.swift in Sources */,
